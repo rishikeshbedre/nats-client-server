@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+  nats-client-server:
+    ports:
+      - "6062:6062"
+    networks:
+      - nats-network
+    image: nats-client-server:0.0.1
+    container_name: nats_client_server
+
+networks:
+  nats-network:
+    name: nats_network
